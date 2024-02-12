@@ -55,7 +55,7 @@ def initial_data_pull(table_name:str,
                 con.execute(f'INSERT INTO {table_name} ({columns}) VALUES ({values})')
         except:
             con.rollback()
-
+    
 
 def create_ticker_metadata(ticker, name, industry, METADATA_TABLE='stock_metadata'):
     con = sqlite3.connect('stocks.db')
